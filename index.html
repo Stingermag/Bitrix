@@ -12,24 +12,18 @@
         <script src="jquery.js"></script>
         <!-- Подключение jQuery плагина Masked Input -->
         <script src="jquery.maskedinput.min.js"></script>
+        <script src="http://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
 
     </head>
 <script>
- function validateFeeling(input) {
-    //alert("234567");
-   if (input.value == "good" || input.value == "fine" || input.value == "tired") {
-     input.setCustomValidity('"' + input.value + '" is not a feeling');
-   } else {
-     // Данные прошли проверку, сбрасываем сообщение об ошибке.
-     input.setCustomValidity('');
-   }
- }
- $(function(){
-    alert("234567");
-  //2. Получить элемент, к которому необходимо добавить маску
-  $("#recall_form_phone").mask("8(999) 999-9999");
 
+ $(function(){
+  //Получить элемент, к которому необходимо добавить маску
+  $("#recall_form_phone").mask("8(999) 999-9999");
 });
+
+
+
 </script>
     <body>
 
@@ -221,13 +215,7 @@
                 <!-- TODO: Как это работает 
                
             -->
-              
-
-
-
-
-
-
+        
              </div>
 
             <div class="section">
@@ -255,21 +243,21 @@
                             <div class="recall-form__row">
                                 <div class="recall-form__col">
                                     <label for="recall_form_company_name" class="recall-form__label">Название организации <span class="required">*</span></label>
-                                    <input type="text" class="recall-form__input" id="recall_form_company_name" name="company_name">
+                                    <input type="text" class="recall-form__input" id="recall_form_company_name" name="company_name" required pattern="^[A-Za-zА-Яа-яЁё0-9\s]+$" title=" Введите название организации">
                                 </div>
                                 <div class="recall-form__col">
                                     <label for="recall_form_contact_person" class="recall-form__label">Имя, фамилия контактного лица <span class="required">*</span></label>
-                                    <input type="text" class="recall-form__input" id="recall_form_contact_person" name="contact_person">
+                                    <input type="text" class="recall-form__input" id="recall_form_contact_person" name="contact_person" required pattern="[A-Za-zА-Яа-яЁё\s]{2,20}\s[A-Za-zА-Яа-яЁё\s]{2,20}" title=" Введите фамилию и имя">
                                 </div>
                             </div>
                             <div class="recall-form__row">
                                 <div class="recall-form__col">
                                     <label for="recall_form_email" class="recall-form__label">Почта <span class="required">*</span></label>
-                                    <input type="text" class="recall-form__input" id="recall_form_email" name="email">
+                                    <input type="text" class="recall-form__input" id="recall_form_email" name="email" required  maxlength="39" pattern="[A-Za-z0-9\D]{3,30}@[A-Za-z]{2,20}.[A-Za-z]{2,4}" title=" Введите почту в виде example@mail.com">
                                 </div>
                                 <div class="recall-form__col">
                                     <label for="recall_form_phone" class="recall-form__label">Телефон <span class="required">*</span></label>
-                                    <input type="text" class="recall-form__input" id="recall_form_phone" oninput="validateFeeling(this)" name="phone">
+                                    <input type="text" class="recall-form__input" id="recall_form_phone"  name="phone" required title=" Введите телефон">
                                 </div>
                             </div>
 
