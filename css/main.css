@@ -1,7 +1,9 @@
 * {
     box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth; /* свойство scroll-behavior не наследуется, применяется к прокручиваемым блокам */ 
+}
 body {
     background-color: #fff;
     color: #202020;
@@ -345,4 +347,35 @@ input.btn:active {
     font-size: 14px;
     padding: 11px 0;
     text-align: center;
+}
+.icon-item__icon {
+	padding: 50px 50px 50px 50px;
+}
+.yellow_digits {
+	color: orange;
+	font-size: 20px;
+}
+
+.hr_after_elipses{
+	padding: 0px;
+
+	margin: 0 40px 0 40px;
+
+	
+
+	height: 0;
+	border: none;
+	border-top: 2px dashed #ddd;
+}
+.step-item_two {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+.elipses{
+	align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 15px;
 }
