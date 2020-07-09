@@ -425,10 +425,11 @@ input:valid {
 
 
 .step-item__descr{
-	    width: 95%;
+	    width: 99%;
 }
 .brackets__inner{
 	 width: 90%;
+     height: 100%
 }
 .head-logo__name{
 	 width: 50%;
@@ -436,5 +437,25 @@ input:valid {
 .head__contacts{
 	 width: 90%;
 }
+.recall-form__row {
+display: block;
 
+}
+.recall-form__col{
+    width: 90%;
+}
+
+
+}
+@media (max-width: 346px){
+.section__title{
+    font-size: 15px;
+    width: 90%;
+}
+.step-item__descr{
+    font-size: 12px;
+}
+.head__contacts{
+     font-size: 10px;
+}
 }
