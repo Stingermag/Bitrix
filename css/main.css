@@ -250,10 +250,11 @@ input.btn:active {
 }
 
 .step-list {
-    align-items: center;
+    
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
 }
 
 .step-list__item {
@@ -264,6 +265,7 @@ input.btn:active {
     margin: 18px 0;
     padding: 0 15px;
     text-align: center;
+
 }
 
 .step-item__descr {
@@ -386,4 +388,53 @@ input:invalid {
 
 input:valid {
   border: 2px solid black;
+}
+
+
+@media (max-width: 780px) {
+
+
+.step-item {
+    margin: 0px 0;
+    padding: 0 0px;
+   
+}
+.icon-item__icon {
+	padding: 10px 10px 10px 10px;
+}
+.section__title {
+
+    font-size: 20px;
+    margin-bottom: 9px;
+    width: 320px;
+}
+
+.head__contacts{
+	font-size: 8px;
+}
+.head-slogan{
+	display: none;
+}
+
+.banner__title{
+	 width: auto;
+}
+
+}
+@media (max-width: 500px) {
+
+
+.step-item__descr{
+	    width: 95%;
+}
+.brackets__inner{
+	 width: 90%;
+}
+.head-logo__name{
+	 width: 50%;
+}
+.head__contacts{
+	 width: 90%;
+}
+
 }
