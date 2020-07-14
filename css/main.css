@@ -28,7 +28,7 @@ h1,
 
 hr {
     border: 0;
-    border-top: 1px solid #eee;
+    border-top: 3px solid #eee;
     margin-bottom: 18px;
     margin-top: 18px;
 }
@@ -61,10 +61,11 @@ hr {
 }
 
 .btn--submit {
-    font-weight: 700;
+ 
     margin: 18px 0;
     padding: 12px 40px;
     text-transform: uppercase;
+     width: 207px;
 }
 .btn--submit:hover {
     background-color: #FFFFFF;
@@ -192,12 +193,24 @@ input.btn:active {
 
 .section {
     padding: 55px 0 40px;
+
+}
+.section_items {
+    padding: 0px 0 40px;
 }
 
 .section--dark {
     background-color: #f9f9f9;
     border-bottom: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
+    
+  
+}
+.section_price{
+     background-color: #f9f9f9;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+
 }
 
 .section__title {
@@ -205,7 +218,9 @@ input.btn:active {
     text-align: center;
     width: 430px;
 }
-
+.section__container_items{
+    max-width: 1010px;
+}
 .brackets {
     align-items: center;
     display: flex;
@@ -236,6 +251,10 @@ input.btn:active {
     letter-spacing: .1px;
     text-align: center;
     width: calc(100%-14.28571rem);
+    font-size: 17px;
+    padding-right: 70px;
+    padding-left: 70px;
+    
 }
 
 .icon-lightning {
@@ -262,8 +281,9 @@ input.btn:active {
 }
 
 .step-item {
-    margin: 18px 0;
-    padding: 0 15px;
+    margin: 10px 0;
+    margin-bottom: 28px;
+    padding: 0 0px;
     text-align: center;
 
 }
@@ -271,6 +291,14 @@ input.btn:active {
 .step-item__descr {
     margin: 0 auto;
     width: 72%;
+    font-size: 14px;
+
+}
+.step-item__descr_afterdigits {
+    margin: 0 auto;
+    width: 72%;
+    font-size: 16px;
+
 }
 
 .recall-form {
@@ -351,18 +379,38 @@ input.btn:active {
     text-align: center;
 }
 .icon-item__icon {
-	padding: 50px 50px 50px 50px;
+	vertical-align: middle;
+}
+.step-item__icon{
+    height: 110px;
+    line-height: 100px;
+    text-align: center;
+
+}
+
+.step-item__digit{
+    height: 70px;
+
+
+}
+
+
+.step-item__icon_elips{
+    height: 0px;
+   
+
 }
 .yellow_digits {
-	color: orange;
-	font-size: 20px;
+	color: #fee133;
+	font-size: 40px;
+    margin: 0px;
 }
 
 .hr_after_elipses{
 	padding: 0px;
-
+   
 	margin: 0 40px 0 40px;
-
+  margin-top: 5px;
 	
 
 	height: 0;
@@ -382,26 +430,24 @@ input.btn:active {
     height: 15px;
 }
 
-input:invalid {
-  border: 2px dashed red;
-}
 
-input:valid {
+
+input[type="text"]:valid {
   border: 2px solid black;
+  background: #b2dfbe;
 }
 
 
 @media (max-width: 780px) {
 
 
-.step-item {
+.-item {
     margin: 0px 0;
+    margin-bottom: 13px;
     padding: 0 0px;
    
 }
-.icon-item__icon {
-	padding: 10px 10px 10px 10px;
-}
+
 .section__title {
 
     font-size: 20px;
@@ -426,10 +472,24 @@ input:valid {
 
 .step-item__descr{
 	    width: 99%;
+       display: block;
+        font-size: 12px;
 }
 .brackets__inner{
 	 width: 90%;
      height: 100%
+
+}
+.step-list__item {
+    width: 90%;
+}
+.step-item__descr_afterdigits {
+  
+    font-size: 13px;
+
+}
+.elipses{
+    display: none;
 }
 .head-logo__name{
 	 width: 50%;
@@ -438,7 +498,7 @@ input:valid {
 	 width: 90%;
 }
 .recall-form__row {
-display: block;
+flex-direction: column;
 
 }
 .recall-form__col{
@@ -454,6 +514,7 @@ display: block;
 }
 .step-item__descr{
     font-size: 12px;
+
 }
 .head__contacts{
      font-size: 10px;
